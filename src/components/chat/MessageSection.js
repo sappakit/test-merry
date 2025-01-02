@@ -19,7 +19,8 @@ export default function MessageSection({
     const lastMessage = messages[messages.length - 1];
     const isSender = lastMessage?.sender_id === userId;
 
-    if (isInitialLoad || isSender) {
+    // Added
+    if (isInitialLoad || isSender || (!isSender && isAtBottom)) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
 

@@ -38,8 +38,8 @@ export default function Chat() {
   useEffect(() => {
     if (!userId) return;
 
-    const socketIo = io(process.env.NEXT_PUBLIC_API_BASE_URL, {
-      path: "/api/chat/socket",
+    const socketIo = io(process.env.NEXT_PUBLIC_SOCKET_SERVER_URL, {
+      path: "/socket.io",
     });
 
     socketIo.on("connect", () => {
