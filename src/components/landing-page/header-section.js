@@ -61,6 +61,17 @@ export default function HeaderSection() {
               >
                 Start matching!
               </CustomButton>
+
+              <CustomButton
+                type="submit"
+                buttonType="primary"
+                customStyle="w-40"
+                onClick={() =>
+                  router.push("/chat/cecb3d56-2d04-4c1d-8c43-5752d1a15a5c")
+                }
+              >
+                Chat Test
+              </CustomButton>
             </div>
           </article>
         </section>
