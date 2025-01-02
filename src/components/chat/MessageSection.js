@@ -139,7 +139,9 @@ export default function MessageSection({
                             className="h-full w-full max-w-[22.5rem] rounded-2xl object-cover lg:max-h-[27.5rem] lg:max-w-[27.5rem]"
                             onLoad={() => {
                               if (
-                                (isInitialLoad || msg.sender_id === userId) &&
+                                (isInitialLoad ||
+                                  msg.sender_id === userId ||
+                                  (msg.sender_id !== userId && isAtBottom)) &&
                                 scrollRef.current
                               ) {
                                 scrollRef.current.scrollTop =
