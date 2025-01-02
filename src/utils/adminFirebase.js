@@ -1,5 +1,6 @@
 import admin from "firebase-admin";
 
+// Change this
 if (!admin.apps.length) {
   const serviceAccount = JSON.parse(
     Buffer.from(process.env.SERVICE_ACCOUNT_KEY_BASE64, "base64").toString(
